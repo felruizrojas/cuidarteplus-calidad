@@ -1,5 +1,5 @@
 // Funciones de apoyo compartidas por las pruebas de Playwright
-const { execSync } = require("child_process");
+const { execFileSync } = require("child_process");
 const crypto = require("crypto");
 const { expect, request: pwRequest } = require("@playwright/test");
 
@@ -82,9 +82,10 @@ async function iniciarSesionComo(page, rol) {
 }
 
 // ---------- Base de datos y Docker (solo lectura salvo indicación) ----------
+// Se usa execFileSync con argumentos separados: no pasa por la shell, así que no hay que escapar nada
 const psql = (sql, db = "cuidarteplus") =>
-  execSync(`docker exec ${PG} psql -U postgres -d ${db} -tAc "${sql.replace(/"/g, '\\"')}"`, { encoding: "utf8" }).trim();
-const docker = (cmd) => execSync(`docker ${cmd}`, { encoding: "utf8" }).trim();
+  execFileSync("docker", ["exec", PG, "psql", "-U", "postgres", "-d", db, "-tAc", sql], { encoding: "utf8" }).trim();
+const docker = (cmd) => execFileSync("docker", cmd.match(/(?:[^\s"]+|"[^"]*")+/g).map((a) => a.replace(/^"|"$/g, "")), { encoding: "utf8" }).trim();
 
 module.exports = {
   API, USUARIOS, TIPO, CLAVE_QA, PDF, sha256, sufijo, dv, rutValido, rutConDvIncorrecto,

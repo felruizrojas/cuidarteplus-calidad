@@ -1,0 +1,6 @@
+# Configuración de CodeQL: se analiza el código del proyecto, no los reportes HTML generados
+# por las herramientas (contienen JavaScript empaquetado de terceros: k6, Istanbul, Playwright).
+name: "Configuración CodeQL de Cuidarte+"
+paths-ignore:
+  - reportes
+  - "**/node_modules"

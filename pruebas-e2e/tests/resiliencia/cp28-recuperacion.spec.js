@@ -38,10 +38,16 @@ test.describe.serial("CP-28 · Recuperación tras reinicio del backend", () => {
   });
 
   test("CP-28 V04 · Tras una caída del proceso, Docker lo reinicia solo y la API vuelve a responder", async () => {
-    try { docker("exec cuidarteplus-backend-et kill 1"); } catch { /* el contenedor se detiene al terminar el proceso */ }
-    await new Promise((r) => setTimeout(r, 1000));
+    // Caída real: se termina el proceso de Node con SIGKILL desde el espacio de procesos del host
+    // (desde dentro del contenedor el kernel ignora las señales dirigidas al PID 1).
+    const antes = Number(docker('inspect -f "{{.RestartCount}}" cuidarteplus-backend-et'));
+    const pid = docker('inspect -f "{{.State.Pid}}" cuidarteplus-backend-et');
+    docker(`run --rm --pid=host --entrypoint kill postgres:15-alpine -9 ${pid}`);
     const s = await segundosHastaResponder();
+    const despues = Number(docker('inspect -f "{{.RestartCount}}" cuidarteplus-backend-et'));
     test.info().annotations.push({ type: "segundos hasta responder", description: s.toFixed(1) });
+    test.info().annotations.push({ type: "reinicios automáticos", description: `${antes} → ${despues}` });
+    expect(despues).toBeGreaterThan(antes);
     expect(s).toBeLessThan(15);
   });
 });
