@@ -78,6 +78,8 @@ test.describe.serial("CP-09 · Mensajes de error y recuperación (NFR-USAB-3, RF
     m.textoInexistente = await page.getByText("Credenciales inválidas").first().innerText();
     m.guiaLogin = await page.getByRole("button", { name: "Guía inicial" }).count();
     await iniciarSesionComo(page, "paciente");
+    // Se espera a que el pie de página termine de dibujarse antes de buscar el enlace de ayuda
+    await page.getByRole("link", { name: "Ayuda" }).first().waitFor({ timeout: 15000 }).catch(() => {});
     m.ayuda = await page.getByRole("link", { name: "Ayuda" }).count();
     await page.close();
   });
