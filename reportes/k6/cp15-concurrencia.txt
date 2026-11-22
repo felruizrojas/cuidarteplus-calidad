@@ -1,4 +1,4 @@
 CP-15 · 200 usuarios concurrentes (k6)
-  API GET /pacientes: p50=330.9ms p95=464.4ms p99=705.3ms · errores=0.00%
+  API GET /pacientes: p50=271.0ms p95=312.3ms p99=473.9ms · errores=0.00%
   Frontend /login:    errores=0.00%
-  solicitudes totales: 375014 · 5949.6 req/s
+  solicitudes totales: 424935 · 6742.8 req/s
