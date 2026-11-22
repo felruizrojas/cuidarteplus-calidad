@@ -1,0 +1,2438 @@
+[
+ {
+  "number": 139,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "lodash-es"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2025-13465",
+   "ghsa_id": "GHSA-xxjr-mmjv-4gpg",
+   "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.17.23"
+   }
+  }
+ },
+ {
+  "number": 138,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss-selector-parser"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-104844",
+   "ghsa_id": "GHSA-rj75-hqrm-r3gf",
+   "summary": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.1.5"
+   }
+  }
+ },
+ {
+  "number": 137,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-112945",
+   "ghsa_id": "GHSA-9jrq-w75r-8gcw",
+   "summary": "Vite: Cross origin script execution through Vite custom middleware"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.7"
+   }
+  }
+ },
+ {
+  "number": 136,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-112946",
+   "ghsa_id": "GHSA-rq7h-c2jc-7f22",
+   "summary": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.7"
+   }
+  }
+ },
+ {
+  "number": 135,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-112944",
+   "ghsa_id": "GHSA-r825-w8mm-5pxw",
+   "summary": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.7"
+   }
+  }
+ },
+ {
+  "number": 134,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-112942",
+   "ghsa_id": "GHSA-587h-7wmj-h5pm",
+   "summary": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.7"
+   }
+  }
+ },
+ {
+  "number": 133,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-112943",
+   "ghsa_id": "GHSA-698v-4r3x-3vcv",
+   "summary": "launch-editor: escapeCmdArgs() omits % escaping on Windows"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.7"
+   }
+  }
+ },
+ {
+  "number": 132,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "source-map-js"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-93749",
+   "ghsa_id": "GHSA-68fv-2mgg-jv7q",
+   "summary": "source-map-js allows event-loop denial of service through indexed source-map section offsets"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.2.2"
+   }
+  }
+ },
+ {
+  "number": 131,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-101904",
+   "ghsa_id": "GHSA-j8rh-479h-cp32",
+   "summary": "Axios: Header Injection via Inherited headers After Minimal Interceptor"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 130,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-101900",
+   "ghsa_id": "GHSA-4hqw-qxg8-jxx2",
+   "summary": "Axios: Fetch Adapter Header Injection via Inherited FormData getHeaders"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 129,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-101908",
+   "ghsa_id": "GHSA-vh66-26gq-q6x8",
+   "summary": "Axios: Prototype pollution gadget in fetch adapter can alter outbound requests"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 128,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-101902",
+   "ghsa_id": "GHSA-9fr6-4gfg-395g",
+   "summary": "Axios: Prototype-Pollution Gadget in the Default Instance Allows Inherited Object.prototype.method to Override HTTP Method"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 127,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-101898",
+   "ghsa_id": "GHSA-3pq3-5fj3-cg6v",
+   "summary": "Axios: HTTP/2 adapter bypasses configured DNS lookup and proxy controls"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 126,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-101901",
+   "ghsa_id": "GHSA-542g-h47m-68v8",
+   "summary": "Axios: Denial of Service via Unhandled 'error' Event in HTTP/2 ClientHttp2Session Initialization"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.0"
+   }
+  }
+ },
+ {
+  "number": 125,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "brace-expansion"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-102277",
+   "ghsa_id": "GHSA-q2hr-2g5m-vwhr",
+   "summary": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.1.21"
+   }
+  }
+ },
+ {
+  "number": 122,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "js-yaml"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-84375",
+   "ghsa_id": "GHSA-2883-xcg3-v3hh",
+   "summary": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.3.2"
+   }
+  }
+ },
+ {
+  "number": 121,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "baseline-browser-mapping"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-45819",
+   "ghsa_id": "GHSA-w5vr-8v7q-w6rv",
+   "summary": "baseline-browser-mapping process termination on invalid input causes denial of service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.11.0"
+   }
+  }
+ },
+ {
+  "number": 120,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "@humanfs/node"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": null,
+   "ghsa_id": "GHSA-p498-v437-472g",
+   "summary": "humanfs: Recursive copy follows symlinked files and copies data from outside the source tree"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "0.16.8"
+   }
+  }
+ },
+ {
+  "number": 119,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "nanoid"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-73086",
+   "ghsa_id": "GHSA-xwg4-73v4-xw9w",
+   "summary": "nanoid: Integer Overflow or Wraparound"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "3.3.12"
+   }
+  }
+ },
+ {
+  "number": 117,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "browserslist"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-73088",
+   "ghsa_id": "GHSA-73wf-gq98-2v4g",
+   "summary": "Browserslist: Uncaught crash / prototype write via untrusted browserslist-stats.json custom stats (normalizeStats)"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.28.7"
+   }
+  }
+ },
+ {
+  "number": 116,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss-selector-parser"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-9358",
+   "ghsa_id": "GHSA-w9m9-85wc-3x92",
+   "summary": "postcss-selector-parser allows denial of service through uncontrolled AST recursion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.1.3"
+   }
+  }
+ },
+ {
+  "number": 113,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "js-yaml"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": null,
+   "ghsa_id": "GHSA-5p4m-2wfm-xmqj",
+   "summary": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.3.1"
+   }
+  }
+ },
+ {
+  "number": 112,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-69153",
+   "ghsa_id": "GHSA-fxqj-rqcc-2cmp",
+   "summary": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "8.5.23"
+   }
+  }
+ },
+ {
+  "number": 109,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-73646",
+   "ghsa_id": "GHSA-r28c-9q8g-f849",
+   "summary": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "8.5.18"
+   }
+  }
+ },
+ {
+  "number": 108,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-55685",
+   "ghsa_id": "GHSA-chx6-hx7r-mcp5",
+   "summary": "React Router: Unauthenticated Denial of Service via Inefficient Route Matching"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.18.0"
+   }
+  }
+ },
+ {
+  "number": 107,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53669",
+   "ghsa_id": "GHSA-wrjc-x8rr-h8h6",
+   "summary": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.18.0"
+   }
+  }
+ },
+ {
+  "number": 106,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53668",
+   "ghsa_id": "GHSA-jjmj-jmhj-qwj2",
+   "summary": "React Router: Open redirect leading to XSS"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.13.0"
+   }
+  }
+ },
+ {
+  "number": 105,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53666",
+   "ghsa_id": "GHSA-337j-9hxr-rhxg",
+   "summary": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.18.0"
+   }
+  }
+ },
+ {
+  "number": 104,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-45623",
+   "ghsa_id": "GHSA-6g55-p6wh-862q",
+   "summary": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "8.5.12"
+   }
+  }
+ },
+ {
+  "number": 103,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67319",
+   "ghsa_id": "GHSA-7q8q-rj6j-mhjq",
+   "summary": "Axios: Nested axios option objects can consume polluted prototype values"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 102,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67318",
+   "ghsa_id": "GHSA-mwf2-3pr3-8698",
+   "summary": "Axios: HTTP/2 streamed uploads bypass `maxBodyLength`"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 101,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67317",
+   "ghsa_id": "GHSA-jqh4-m9w3-8hp9",
+   "summary": "Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 100,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67316",
+   "ghsa_id": "GHSA-mmx7-hfxf-jppx",
+   "summary": "Axios: Prototype pollution gadgets can alter axios request construction"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 99,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "js-yaml"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-59869",
+   "ghsa_id": "GHSA-52cp-r559-cp3m",
+   "summary": "js-yaml: YAML merge-key chains can force quadratic CPU consumption"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.3.0"
+   }
+  }
+ },
+ {
+  "number": 98,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "brace-expansion"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-13149",
+   "ghsa_id": "GHSA-3jxr-9vmj-r5cp",
+   "summary": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.1.16"
+   }
+  }
+ },
+ {
+  "number": 97,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67313",
+   "ghsa_id": "GHSA-42h9-826w-cgv3",
+   "summary": "Axios: Excessive recursion in formDataToJSON can cause denial of service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 96,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-67312",
+   "ghsa_id": "GHSA-pmv8-rq9r-6j72",
+   "summary": "Axios: Deep formToJSON Key Recursion Can Cause Denial of Service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.18.0"
+   }
+  }
+ },
+ {
+  "number": 95,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "js-yaml"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53550",
+   "ghsa_id": "GHSA-h67p-54hq-rp68",
+   "summary": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.2.0"
+   }
+  }
+ },
+ {
+  "number": 94,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "form-data"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-12143",
+   "ghsa_id": "GHSA-hmw2-7cc7-3qxx",
+   "summary": "form-data: CRLF injection in form-data via unescaped multipart field names and filenames"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.0.6"
+   }
+  }
+ },
+ {
+  "number": 93,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53632",
+   "ghsa_id": "GHSA-v6wh-96g9-6wx3",
+   "summary": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.5"
+   }
+  }
+ },
+ {
+  "number": 92,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-53571",
+   "ghsa_id": "GHSA-fx2h-pf6j-xcff",
+   "summary": "vite: `server.fs.deny` bypass on Windows alternate paths"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.5"
+   }
+  }
+ },
+ {
+  "number": 91,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "@babel/core"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-49356",
+   "ghsa_id": "GHSA-4x5r-pxfx-6jf8",
+   "summary": "@babel/core: Arbitrary File Read via sourceMappingURL Comment"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.29.6"
+   }
+  }
+ },
+ {
+  "number": 90,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-34077",
+   "ghsa_id": "GHSA-rxv8-25v2-qmq8",
+   "summary": "React Router vulnerable to Denial of Service via reflected user input in single-fetch"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.14.0"
+   }
+  }
+ },
+ {
+  "number": 89,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44496",
+   "ghsa_id": "GHSA-hfxv-24rg-xrqf",
+   "summary": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 88,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44488",
+   "ghsa_id": "GHSA-777c-7fjr-54vf",
+   "summary": "Allocation of Resources Without Limits or Throttling in Axios"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 87,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44487",
+   "ghsa_id": "GHSA-p92q-9vqr-4j8v",
+   "summary": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 86,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44486",
+   "ghsa_id": "GHSA-j5f8-grm9-p9fc",
+   "summary": "Axios: Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 85,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42342",
+   "ghsa_id": "GHSA-8x6r-g9mw-2r78",
+   "summary": "React Router vulnerable to DoS via unbounded path expansion in __manifest endpoint"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.15.0"
+   }
+  }
+ },
+ {
+  "number": 84,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42211",
+   "ghsa_id": "GHSA-49rj-9fvp-4h2h",
+   "summary": "React Router's vendored turbo-stream v2 allows arbitrary constructor invocation via TYPE_ERROR deserialization leading to Unauth RCE"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.14.2"
+   }
+  }
+ },
+ {
+  "number": 83,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-40181",
+   "ghsa_id": "GHSA-2j2x-hqr9-3h42",
+   "summary": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.14.1"
+   }
+  }
+ },
+ {
+  "number": 82,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-33245",
+   "ghsa_id": "GHSA-8646-j5j9-6r62",
+   "summary": "React Router vulnerable to XSS in unstable RSC redirect handling via javascript: redirect targets"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.13.2"
+   }
+  }
+ },
+ {
+  "number": 81,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-33244",
+   "ghsa_id": "GHSA-f22v-gfqf-p8f3",
+   "summary": "React Router has stored XSS via unescaped Location header in prerendered redirect HTML"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.13.2"
+   }
+  }
+ },
+ {
+  "number": 80,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44495",
+   "ghsa_id": "GHSA-3g43-6gmg-66jw",
+   "summary": "axios Vulnerable to Credential Theft and Response Hijacking via Prototype Pollution Gadget in Config Merge"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.2"
+   }
+  }
+ },
+ {
+  "number": 79,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-44494",
+   "ghsa_id": "GHSA-35jp-ww65-95wh",
+   "summary": "axios Vulnerable to Full Man-in-the-Middle via Prototype Pollution Gadget in `config.proxy`"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 78,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-44490",
+   "ghsa_id": "GHSA-898c-q2cr-xwhg",
+   "summary": "axios has DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 77,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42037",
+   "ghsa_id": "GHSA-445q-vr5w-6q77",
+   "summary": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 76,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42038",
+   "ghsa_id": "GHSA-m7pr-hjqh-92cm",
+   "summary": "Axios: no_proxy bypass via IP alias allows SSRF"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 75,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42039",
+   "ghsa_id": "GHSA-62hf-57xw-28j9",
+   "summary": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 74,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42034",
+   "ghsa_id": "GHSA-5c9x-8gcm-mpgx",
+   "summary": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 73,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42036",
+   "ghsa_id": "GHSA-vf2m-468p-8v99",
+   "summary": "Axios: HTTP adapter streamed responses bypass maxContentLength"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 72,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42033",
+   "ghsa_id": "GHSA-pf86-5x62-jrwf",
+   "summary": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 71,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42035",
+   "ghsa_id": "GHSA-6chq-wfr3-2hj9",
+   "summary": "Axios: Header Injection via Prototype Pollution"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 70,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42042",
+   "ghsa_id": "GHSA-xx6v-rp6x-q39c",
+   "summary": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 69,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42041",
+   "ghsa_id": "GHSA-w9j2-pvgh-6h63",
+   "summary": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 68,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42043",
+   "ghsa_id": "GHSA-pmwg-cvhr-8vh7",
+   "summary": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 67,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-42044",
+   "ghsa_id": "GHSA-3w6x-2g7m-8v23",
+   "summary": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.2"
+   }
+  }
+ },
+ {
+  "number": 66,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-42264",
+   "ghsa_id": "GHSA-q8qp-cvcw-x6jj",
+   "summary": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.2"
+   }
+  }
+ },
+ {
+  "number": 65,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-42040",
+   "ghsa_id": "GHSA-xhjh-pmcv-23jw",
+   "summary": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.1"
+   }
+  }
+ },
+ {
+  "number": 64,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "postcss"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-41305",
+   "ghsa_id": "GHSA-qx2v-qp2m-jg93",
+   "summary": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "8.5.10"
+   }
+  }
+ },
+ {
+  "number": 63,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2025-62718",
+   "ghsa_id": "GHSA-3p68-rc4w-qgx5",
+   "summary": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.0"
+   }
+  }
+ },
+ {
+  "number": 62,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-40175",
+   "ghsa_id": "GHSA-fvcv-3m26-pcqx",
+   "summary": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.15.0"
+   }
+  }
+ },
+ {
+  "number": 61,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "follow-redirects"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-40895",
+   "ghsa_id": "GHSA-r4q5-vmmm-2653",
+   "summary": "follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Targets"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.16.0"
+   }
+  }
+ },
+ {
+  "number": 60,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-39365",
+   "ghsa_id": "GHSA-4w7w-66w2-5vf9",
+   "summary": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.2"
+   }
+  }
+ },
+ {
+  "number": 59,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-39364",
+   "ghsa_id": "GHSA-v2wj-q39q-566r",
+   "summary": "Vite: `server.fs.deny` bypassed with queries"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.2"
+   }
+  }
+ },
+ {
+  "number": 58,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "vite"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-39363",
+   "ghsa_id": "GHSA-p9ff-h696-f583",
+   "summary": "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.3.2"
+   }
+  }
+ },
+ {
+  "number": 57,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "lodash-es"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-4800",
+   "ghsa_id": "GHSA-r5fr-rjxr-66jc",
+   "summary": "lodash vulnerable to Code Injection via `_.template` imports key names"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.18.0"
+   }
+  }
+ },
+ {
+  "number": 56,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "lodash"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-4800",
+   "ghsa_id": "GHSA-r5fr-rjxr-66jc",
+   "summary": "lodash vulnerable to Code Injection via `_.template` imports key names"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.18.0"
+   }
+  }
+ },
+ {
+  "number": 54,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "picomatch"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-33672",
+   "ghsa_id": "GHSA-3v7f-55p6-f55p",
+   "summary": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.3.2"
+   }
+  }
+ },
+ {
+  "number": 53,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "picomatch"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-33672",
+   "ghsa_id": "GHSA-3v7f-55p6-f55p",
+   "summary": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.0.4"
+   }
+  }
+ },
+ {
+  "number": 50,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "yaml"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-33532",
+   "ghsa_id": "GHSA-48c2-rrv3-qjmp",
+   "summary": "yaml is vulnerable to Stack Overflow via deeply nested YAML collections"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.10.3"
+   }
+  }
+ },
+ {
+  "number": 48,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "flatted"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-33228",
+   "ghsa_id": "GHSA-rf6f-7fwh-wjgh",
+   "summary": "Prototype Pollution via parse() in NodeJS flatted"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "3.4.2"
+   }
+  }
+ },
+ {
+  "number": 46,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "minimatch"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-27903",
+   "ghsa_id": "GHSA-7r86-cg39-jmmj",
+   "summary": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "3.1.3"
+   }
+  }
+ },
+ {
+  "number": 44,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "rollup"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-27606",
+   "ghsa_id": "GHSA-mw96-cpmx-2vgc",
+   "summary": "Rollup 4 has Arbitrary File Write via Path Traversal"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.59.0"
+   }
+  }
+ },
+ {
+  "number": 41,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "axios"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-25639",
+   "ghsa_id": "GHSA-43fc-jf86-j433",
+   "summary": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.13.5"
+   }
+  }
+ },
+ {
+  "number": 40,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "lodash"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2025-13465",
+   "ghsa_id": "GHSA-xxjr-mmjv-4gpg",
+   "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "4.17.23"
+   }
+  }
+ },
+ {
+  "number": 39,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-22030",
+   "ghsa_id": "GHSA-h5cw-625j-3rxh",
+   "summary": "React Router has CSRF issue in Action/Server Action Request Processing"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.12.0"
+   }
+  }
+ },
+ {
+  "number": 38,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-22029",
+   "ghsa_id": "GHSA-2w69-qvjg-hvjx",
+   "summary": "React Router vulnerable to XSS via Open Redirects"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.12.0"
+   }
+  }
+ },
+ {
+  "number": 37,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "react-router"
+   },
+   "manifest_path": "FRONTEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-21884",
+   "ghsa_id": "GHSA-8v8x-cx79-35w7",
+   "summary": "React Router SSR XSS in ScrollRestoration"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "7.12.0"
+   }
+  }
+ },
+ {
+  "number": 36,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "qs"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-110816",
+   "ghsa_id": "GHSA-6pq8-jhm2-2vcw",
+   "summary": "qs : qs.stringify with arrayFormat 'comma' throws an uncaught TypeError on array elements carrying a non-callable own toString (DoS)"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.16.1"
+   }
+  }
+ },
+ {
+  "number": 35,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "body-parser"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-111181",
+   "ghsa_id": "GHSA-27r3-jxmh-p828",
+   "summary": "body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.9"
+   }
+  }
+ },
+ {
+  "number": 34,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "proxy-addr"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "critical",
+   "cve_id": "CVE-2026-90711",
+   "ghsa_id": "GHSA-jqcg-44mw-7w3h",
+   "summary": "proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.0.8"
+   }
+  }
+ },
+ {
+  "number": 33,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "brace-expansion"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-102277",
+   "ghsa_id": "GHSA-q2hr-2g5m-vwhr",
+   "summary": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.1.21"
+   }
+  }
+ },
+ {
+  "number": 30,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "morgan"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-87859",
+   "ghsa_id": "GHSA-9f6g-j8ch-79g4",
+   "summary": "morgan vulnerable to Log Injection via unescaped double quote in quoted log fields"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.12.1"
+   }
+  }
+ },
+ {
+  "number": 29,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-77078",
+   "ghsa_id": "GHSA-wc9g-mqfw-jrwm",
+   "summary": "multer vulnerable to Denial of Service via crafted multipart field names"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.3.0"
+   }
+  }
+ },
+ {
+  "number": 28,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-77063",
+   "ghsa_id": "GHSA-qvfw-j98x-7q72",
+   "summary": "multer vulnerable to file size limit bypass via async fileFilter race condition"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.3.0"
+   }
+  }
+ },
+ {
+  "number": 27,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-82333",
+   "ghsa_id": "GHSA-535w-7cp7-47q4",
+   "summary": "multer vulnerable to Denial of Service via oversized array index in field names"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.3.0"
+   }
+  }
+ },
+ {
+  "number": 26,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "morgan"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-15603",
+   "ghsa_id": "GHSA-jxfw-x594-9x9m",
+   "summary": "morgan vulnerable to Log Forging via unescaped Unicode line separators"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.12.0"
+   }
+  }
+ },
+ {
+  "number": 25,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "qs"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-82417",
+   "ghsa_id": "GHSA-4mjr-xmp4-gh2g",
+   "summary": "qs: Denial of Service via Attacker Controlled isBuffer"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.16.0"
+   }
+  }
+ },
+ {
+  "number": 22,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "body-parser"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-12590",
+   "ghsa_id": "GHSA-v422-hmwv-36x6",
+   "summary": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.20.6"
+   }
+  }
+ },
+ {
+  "number": 21,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "brace-expansion"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-13149",
+   "ghsa_id": "GHSA-3jxr-9vmj-r5cp",
+   "summary": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.1.16"
+   }
+  }
+ },
+ {
+  "number": 20,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "morgan"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-5078",
+   "ghsa_id": "GHSA-4vj7-5mj6-jm8m",
+   "summary": "morgan vulnerable to Log Forging via unneutralized control characters in :remote-user"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "1.11.0"
+   }
+  }
+ },
+ {
+  "number": 19,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-5079",
+   "ghsa_id": "GHSA-72gw-mp4g-v24j",
+   "summary": "Multer vulnerable to Denial of Service via deeply nested field names"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.2.0"
+   }
+  }
+ },
+ {
+  "number": 18,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "qs"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-8723",
+   "ghsa_id": "GHSA-q8mj-m7cp-5q26",
+   "summary": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.15.2"
+   }
+  }
+ },
+ {
+  "number": 17,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "path-to-regexp"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-4867",
+   "ghsa_id": "GHSA-37ch-88jc-xwx2",
+   "summary": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple route parameters"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "0.1.13"
+   }
+  }
+ },
+ {
+  "number": 15,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "picomatch"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2026-33672",
+   "ghsa_id": "GHSA-3v7f-55p6-f55p",
+   "summary": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.3.2"
+   }
+  }
+ },
+ {
+  "number": 13,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-3520",
+   "ghsa_id": "GHSA-5528-5vmv-3xc2",
+   "summary": "Multer Vulnerable to Denial of Service via Uncontrolled Recursion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.1.1"
+   }
+  }
+ },
+ {
+  "number": 12,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-3304",
+   "ghsa_id": "GHSA-xf7r-hgr6-v32p",
+   "summary": "Multer vulnerable to Denial of Service via incomplete cleanup"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.1.0"
+   }
+  }
+ },
+ {
+  "number": 11,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-2359",
+   "ghsa_id": "GHSA-v52c-386h-88mc",
+   "summary": "Multer vulnerable to Denial of Service via resource exhaustion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.1.0"
+   }
+  }
+ },
+ {
+  "number": 10,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "minimatch"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2026-27903",
+   "ghsa_id": "GHSA-7r86-cg39-jmmj",
+   "summary": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "3.1.3"
+   }
+  }
+ },
+ {
+  "number": 7,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "qs"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "low",
+   "cve_id": "CVE-2026-2391",
+   "ghsa_id": "GHSA-w7fw-mjwx-w883",
+   "summary": "qs's arrayLimit bypass in comma parsing allows denial of service"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.14.2"
+   }
+  }
+ },
+ {
+  "number": 6,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "qs"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "medium",
+   "cve_id": "CVE-2025-15284",
+   "ghsa_id": "GHSA-6rw7-vpxm-498p",
+   "summary": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "6.14.1"
+   }
+  }
+ },
+ {
+  "number": 5,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "jws"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2025-65945",
+   "ghsa_id": "GHSA-869p-cjfg-cm3x",
+   "summary": "auth0/node-jws Improperly Verifies HMAC Signature"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "3.2.3"
+   }
+  }
+ },
+ {
+  "number": 4,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2025-7338",
+   "ghsa_id": "GHSA-fjgf-rc76-4x9p",
+   "summary": "Multer vulnerable to Denial of Service via unhandled exception from malformed request"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.0.2"
+   }
+  }
+ },
+ {
+  "number": 3,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2025-48997",
+   "ghsa_id": "GHSA-g5hg-p3ph-g8qg",
+   "summary": "Multer vulnerable to Denial of Service via unhandled exception"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.0.1"
+   }
+  }
+ },
+ {
+  "number": 2,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2025-47944",
+   "ghsa_id": "GHSA-4pg4-qvpc-4q3h",
+   "summary": "Multer vulnerable to Denial of Service from maliciously crafted requests"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.0.0"
+   }
+  }
+ },
+ {
+  "number": 1,
+  "state": "open",
+  "dependency": {
+   "package": {
+    "name": "multer"
+   },
+   "manifest_path": "BACKEND/package-lock.json"
+  },
+  "security_advisory": {
+   "severity": "high",
+   "cve_id": "CVE-2025-47935",
+   "ghsa_id": "GHSA-44fp-w29j-9vj5",
+   "summary": "Multer vulnerable to Denial of Service via memory leaks from unclosed streams"
+  },
+  "security_vulnerability": {
+   "first_patched_version": {
+    "identifier": "2.0.0"
+   }
+  }
+ }
+]

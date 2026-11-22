@@ -1,0 +1,287 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e3]:
+        - button "Close toast" [ref=e4] [cursor=pointer]:
+          - img [ref=e5]
+        - img [ref=e9]
+        - generic [ref=e11]:
+          - generic [ref=e12]: Error de validación
+          - generic [ref=e13]: Los datos proporcionados no son válidos
+      - listitem [ref=e14]:
+        - button "Close toast" [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+        - img [ref=e20]
+        - generic [ref=e23]: No encontrado
+  - generic [ref=e24]:
+    - banner [ref=e25]:
+      - generic [ref=e26]:
+        - link "Logo del Sistema Médico" [ref=e28] [cursor=pointer]:
+          - /url: /home
+          - img "Logo del Sistema Médico" [ref=e29]
+        - navigation "Navegación principal" [ref=e30]:
+          - link "Ir a undefined" [ref=e31] [cursor=pointer]:
+            - /url: /home
+            - img [ref=e33]
+          - link "Ir a Pacientes" [ref=e35] [cursor=pointer]:
+            - /url: /pacientes
+            - img [ref=e37]
+            - text: Pacientes
+          - link "Ir a Exámenes Médicos" [ref=e39] [cursor=pointer]:
+            - /url: /examenes
+            - img [ref=e41]
+            - text: Exámenes Médicos
+        - generic [ref=e43]:
+          - generic [ref=e45]:
+            - paragraph [ref=e46]: medico.qa
+            - generic [ref=e47]: medico
+          - button "Menú de usuario" [ref=e48] [cursor=pointer]:
+            - img [ref=e49]
+    - main [ref=e51]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img [ref=e55]
+          - generic [ref=e57]:
+            - heading "Gestión de Pacientes" [level=5] [ref=e58]
+            - generic [ref=e59]: Busca un paciente por RUT para ver su información y exámenes médicos.
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic: Buscar por RUT
+            - generic [ref=e64]:
+              - textbox "Buscar por RUT" [ref=e65]:
+                - /placeholder: "Ej: 12.345.678-9"
+              - group:
+                - generic: Buscar por RUT
+          - button "Buscar" [disabled]:
+            - generic:
+              - img
+            - text: Buscar
+          - button "Registrar Paciente" [ref=e66] [cursor=pointer]:
+            - img [ref=e68]
+            - text: Registrar Paciente
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - heading "Registrar Nuevo Paciente" [level=6] [ref=e73]
+            - button "Cancelar" [ref=e74] [cursor=pointer]
+          - separator [ref=e75]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - heading "Registrar nuevo paciente" [level=6] [ref=e80]
+              - text: Ingresa los datos del paciente para registrarlo en el sistema.
+            - separator [ref=e81]
+            - generic [ref=e83]:
+              - generic [ref=e84]:
+                - heading "1. Información Personal" [level=6] [ref=e85]
+                - generic [ref=e86]:
+                  - generic [ref=e87]:
+                    - generic [ref=e88]:
+                      - text: RUT
+                      - generic [ref=e89]: "*"
+                    - generic [ref=e90]:
+                      - textbox "RUT" [ref=e91]: 4.876.321-9
+                      - group:
+                        - generic: RUT *
+                  - generic [ref=e92]:
+                    - generic [ref=e93]:
+                      - text: Primer Nombre
+                      - generic [ref=e94]: "*"
+                    - generic [ref=e95]:
+                      - textbox "Primer Nombre" [ref=e96]: Pedro
+                      - group:
+                        - generic: Primer Nombre *
+                  - generic [ref=e97]:
+                    - generic [ref=e98]:
+                      - text: Apellido Paterno
+                      - generic [ref=e99]: "*"
+                    - generic [ref=e100]:
+                      - textbox "Apellido Paterno" [ref=e101]: Soto
+                      - group:
+                        - generic: Apellido Paterno *
+                  - generic [ref=e102]:
+                    - generic [ref=e103]: Apellido Materno
+                    - generic [ref=e104]:
+                      - textbox "Apellido Materno" [ref=e105]: Rivas
+                      - group:
+                        - generic: Apellido Materno
+                - generic [ref=e106]:
+                  - generic [ref=e107]:
+                    - generic [ref=e108]:
+                      - text: Fecha de Nacimiento
+                      - generic [ref=e109]: "*"
+                    - generic [ref=e110]:
+                      - textbox "Fecha de Nacimiento" [ref=e111]: 1948-08-03
+                      - group:
+                        - generic: Fecha de Nacimiento *
+                  - generic [ref=e112]:
+                    - generic [ref=e113]: Sexo
+                    - generic [ref=e114]:
+                      - combobox "Masculino" [ref=e115] [cursor=pointer]
+                      - textbox: M
+                      - img
+                      - group:
+                        - generic: Sexo
+                  - generic [ref=e116]:
+                    - generic: Nacionalidad
+                    - generic [ref=e117]:
+                      - textbox "Nacionalidad" [ref=e118]
+                      - group:
+                        - generic: Nacionalidad
+                  - generic [ref=e119]:
+                    - generic: Estado Civil
+                    - generic [ref=e120]:
+                      - combobox [ref=e121] [cursor=pointer]
+                      - textbox
+                      - img
+                      - group:
+                        - generic: Estado Civil
+              - separator [ref=e122]
+              - generic [ref=e123]:
+                - heading "2. Información de Contacto" [level=6] [ref=e124]
+                - generic [ref=e125]:
+                  - generic [ref=e126]:
+                    - generic [ref=e127]:
+                      - text: Email
+                      - generic [ref=e128]: "*"
+                    - generic [ref=e129]:
+                      - textbox "Email" [ref=e130]: pedro.soto@correo.cl
+                      - group:
+                        - generic: Email *
+                  - generic [ref=e131]:
+                    - generic: Teléfono
+                    - generic [ref=e132]:
+                      - textbox "Teléfono" [ref=e133]
+                      - group:
+                        - generic: Teléfono
+                - generic [ref=e134]:
+                  - generic: Dirección
+                  - generic [ref=e135]:
+                    - textbox "Dirección" [ref=e136]
+                    - group:
+                      - generic: Dirección
+                - heading "Contacto de Emergencia" [level=6] [ref=e137]
+                - generic [ref=e138]:
+                  - generic [ref=e139]:
+                    - generic: Nombre
+                    - generic [ref=e140]:
+                      - textbox "Nombre" [ref=e141]
+                      - group:
+                        - generic: Nombre
+                  - generic [ref=e142]:
+                    - generic: Teléfono
+                    - generic [ref=e143]:
+                      - textbox "Teléfono" [ref=e144]
+                      - group:
+                        - generic: Teléfono
+                  - generic [ref=e145]:
+                    - generic: Relación
+                    - generic [ref=e146]:
+                      - textbox "Relación" [ref=e147]
+                      - group:
+                        - generic: Relación
+              - separator [ref=e148]
+              - generic [ref=e149]:
+                - heading "3. Previsión Social" [level=6] [ref=e150]
+                - generic [ref=e151]:
+                  - generic [ref=e152]:
+                    - generic: Tipo de Previsión
+                    - generic [ref=e153]:
+                      - textbox "Tipo de Previsión" [ref=e154]
+                      - group:
+                        - generic: Tipo de Previsión
+                  - generic [ref=e155] [cursor=pointer]:
+                    - generic [ref=e156]:
+                      - checkbox "Tiene Convenio" [ref=e157]
+                      - img [ref=e158]
+                    - generic [ref=e160]: Tiene Convenio
+              - separator [ref=e161]
+              - generic [ref=e162]:
+                - heading "4. Información Médica" [level=6] [ref=e163]
+                - generic [ref=e165]:
+                  - generic: Grupo Sanguíneo
+                  - generic [ref=e166]:
+                    - combobox [ref=e167] [cursor=pointer]
+                    - textbox
+                    - img
+                    - group:
+                      - generic: Grupo Sanguíneo
+                - generic [ref=e168]:
+                  - generic: Alergias
+                  - generic [ref=e169]:
+                    - textbox "Alergias" [ref=e170]
+                    - group:
+                      - generic: Alergias
+                - generic [ref=e171]:
+                  - generic: Enfermedades Crónicas
+                  - generic [ref=e172]:
+                    - textbox "Enfermedades Crónicas" [ref=e173]
+                    - group:
+                      - generic: Enfermedades Crónicas
+                - generic [ref=e174]:
+                  - generic: Discapacidades
+                  - generic [ref=e175]:
+                    - textbox "Discapacidades" [ref=e176]
+                    - group:
+                      - generic: Discapacidades
+                - generic [ref=e177]:
+                  - generic: Observaciones Médicas Generales
+                  - generic [ref=e178]:
+                    - textbox "Observaciones Médicas Generales" [ref=e179]
+                    - group:
+                      - generic: Observaciones Médicas Generales
+              - separator [ref=e180]
+              - generic [ref=e181]:
+                - button "Cancelar" [ref=e182] [cursor=pointer]
+                - button "Registrar Paciente" [ref=e183] [cursor=pointer]:
+                  - img [ref=e185]
+                  - text: Registrar Paciente
+    - contentinfo [ref=e187]:
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - link "Logo del Sistema Médico" [ref=e191] [cursor=pointer]:
+              - /url: /home
+              - img "Logo del Sistema Médico" [ref=e192]
+            - paragraph [ref=e193]: Sistema de gestión de exámenes médicos. Administra pacientes, exámenes y resultados de manera eficiente y segura.
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - heading "Enlaces Rápidos" [level=6] [ref=e196]
+              - generic [ref=e197]:
+                - link "Inicio" [ref=e198] [cursor=pointer]:
+                  - /url: /home
+                - link "Pacientes" [ref=e199] [cursor=pointer]:
+                  - /url: /pacientes
+                - link "Exámenes" [ref=e200] [cursor=pointer]:
+                  - /url: /examenes
+            - generic [ref=e201]:
+              - heading "Información" [level=6] [ref=e202]
+              - generic [ref=e203]:
+                - link "Acerca de" [ref=e204] [cursor=pointer]:
+                  - /url: /acerca-de
+                - link "Ayuda" [ref=e205] [cursor=pointer]:
+                  - /url: /ayuda
+                - link "Mi Cuenta" [ref=e206] [cursor=pointer]:
+                  - /url: /usuarios/18/editar
+          - generic [ref=e207]:
+            - heading "Contacto" [level=6] [ref=e208]
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - img [ref=e211]
+                - paragraph [ref=e213]: contacto@cuidarteplus.cl
+              - generic [ref=e214]:
+                - img [ref=e215]
+                - paragraph [ref=e217]: +56 9 1234 5678
+              - generic [ref=e218]:
+                - img [ref=e219]
+                - paragraph [ref=e221]: Santiago, Chile
+        - separator [ref=e222]
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: © 2026 cuidarteplus. Todos los derechos reservados.
+          - generic [ref=e225]:
+            - link "Política de Privacidad" [ref=e226] [cursor=pointer]:
+              - /url: /politica-privacidad
+            - link "Términos de Uso" [ref=e227] [cursor=pointer]:
+              - /url: /terminos-uso
+```
