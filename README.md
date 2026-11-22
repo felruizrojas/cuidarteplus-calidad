@@ -44,3 +44,31 @@ Abre la terminal y situate en la raíz del proyecto y ejecuta el comando:
 	4.3 Database: `cuidarteplus`
 	4.4 Nombre de usuario: `postgres`
 	4.5 Contraseña: `postgres`
+
+## Aseguramiento de calidad y seguridad (EP5)
+
+Las pruebas automatizadas cubren los 34 casos de prueba del plan (CP-01 a CP-34) con las herramientas de las cuatro actividades:
+
+| Etapa | Herramienta | Qué verifica | Reporte HTML |
+|---|---|---|---|
+| Secretos | Gitleaks | Contraseñas y tokens en todo el historial de Git | `reportes/gitleaks/index.html` |
+| Contenedores | Hadolint | Buenas prácticas en los Dockerfiles | `reportes/hadolint/index.html` |
+| Dependencias | Dependabot | Librerías e imágenes con vulnerabilidades | `reportes/dependabot/index.html` |
+| Código | SonarQube (local y Cloud) | Análisis estático, cobertura y Quality Gate | `reportes/sonarqube/*.html` |
+| Código | CodeQL | Vulnerabilidades por flujo de datos | `reportes/codeql/index.html` |
+| Unitarias, integración y API | Jest + Supertest | CP-04, 05, 11, 13, 14, 23, 24, 29, 30 y 31 | `reportes/jest/index.html` y `reportes/jest/cobertura/` |
+| Sistema, aceptación, usabilidad | Playwright + axe-core | CP-01–03, 07–10, 12, 15–22, 25, 26, 28, 32–34 | `reportes/playwright/index.html` |
+| Rendimiento | k6 | CP-06 (CRUD) y CP-15 (200 usuarios) | `reportes/k6/*.html` |
+| Seguridad dinámica | OWASP ZAP | Sitio web y API (OpenAPI) | `reportes/zap/*.html` |
+
+**Ejecutar todo en local** (requiere Docker, Node.js 20+, Python 3 y la CLI `gh`):
+
+```bash
+cp .env.example .env            # completar JWT_SECRET
+./sonar.sh up                   # opcional: SonarQube local en http://localhost:9000
+./ejecutar-pruebas.sh           # genera reportes/index.html con todos los reportes
+```
+
+**Pipeline CI/CD** (`.github/workflows/ci.yml`): en cada push y Pull Request ejecuta Gitleaks y Hadolint → Jest + SonarQube Cloud → ZAP, Playwright y k6 sobre el sistema en Docker → publica las imágenes en GHCR (solo en `main`) y reúne todos los reportes en el artefacto `reportes-html`. La rama `main` está protegida: exige Pull Request y que todos los checks aprueben.
+
+Los defectos conocidos se registran como pruebas de *falla esperada* con su identificador (INC-xx): el pipeline sigue en verde mientras el defecto exista y avisa cuando alguien lo corrige.

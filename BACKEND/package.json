@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon",
-    "test": "jest --coverage",
+    "test": "jest --coverage --runInBand",
     "test:unit": "jest tests/unit",
-    "test:integration": "jest tests/integration --runInBand"
+    "test:integration": "jest tests/integration --runInBand",
+    "test:seguridad": "jest tests/seguridad --runInBand"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -23,7 +24,9 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
     "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7",
     "nodemon": "^3.1.0",
     "supertest": "^7.1.4"
   },
@@ -40,7 +43,41 @@
       "text",
       "lcov"
     ],
-    "testTimeout": 15000,
-    "watchman": false
+    "testTimeout": 30000,
+    "watchman": false,
+    "transform": {
+      "[/\\\\]FRONTEND[/\\\\].+\\.js$": [
+        "babel-jest",
+        {
+          "presets": [
+            [
+              "@babel/preset-env",
+              {
+                "targets": {
+                  "node": "current"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "moduleNameMapper": {
+      "^yup$": "<rootDir>/node_modules/yup"
+    },
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "../reportes/jest",
+          "filename": "index.html",
+          "pageTitle": "Cuidarte+ · Jest + Supertest (unitarias, integración y seguridad de la API)",
+          "expand": false,
+          "inlineSource": true,
+          "includeConsoleLog": false
+        }
+      ]
+    ]
   }
 }

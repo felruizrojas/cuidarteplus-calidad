@@ -1,0 +1,275 @@
+{
+  "metrics": {
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": -1.69693,
+        "med": 0.015833,
+        "max": 119.2395,
+        "p(90)": 0.082375,
+        "p(95)": 0.19197334999999932,
+        "p(99)": 2.5783695399999997,
+        "avg": 0.13572618825697302
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 31.533713507360606,
+        "min": 0.325959,
+        "med": 13.5234375,
+        "max": 2109.996459,
+        "p(90)": 34.3708042,
+        "p(95)": 88.79458934999988,
+        "p(99)": 376.1236449599999
+      }
+    },
+    "http_req_connecting": {
+      "values": {
+        "avg": 0.05379621121878115,
+        "min": 0,
+        "med": 0,
+        "max": 105.682333,
+        "p(90)": 0,
+        "p(95)": 0,
+        "p(99)": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 913240460,
+        "rate": 14488584.576897968
+      }
+    },
+    "http_req_tls_handshaking": {
+      "values": {
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0,
+        "p(99)": 0,
+        "avg": 0,
+        "min": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "iteration_duration": {
+      "contains": "time",
+      "values": {
+        "p(95)": 92.40636659999986,
+        "p(99)": 376.43443592,
+        "avg": 31.984977341651746,
+        "min": 0.41575,
+        "med": 13.785041,
+        "max": 2170.628543,
+        "p(90)": 35.4781922
+      },
+      "type": "trend"
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0.352625,
+        "med": 13.6187295,
+        "max": 2110.230876,
+        "p(90)": 34.804645900000004,
+        "p(95)": 89.45017729999985,
+        "p(99)": 376.32992766999996,
+        "avg": 31.691806777849404
+      }
+    },
+    "http_req_failed{esc:api}": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 17244
+      },
+      "thresholds": {
+        "rate<0.001": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 375014
+      }
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 0.018042,
+        "avg": 0.059880090620649785,
+        "min": 0.000458,
+        "med": 0.001125,
+        "max": 105.748416,
+        "p(90)": 0.003291,
+        "p(95)": 0.005584
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0.011375,
+        "p(95)": 0.019208,
+        "p(99)": 0.12707766999999986,
+        "avg": 0.02236708223159707,
+        "min": 0.001583,
+        "med": 0.003875,
+        "max": 112.196126
+      }
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 375013,
+        "rate": 5949.591379182037
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 375013,
+        "fails": 0
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 400,
+        "min": 400,
+        "max": 400
+      }
+    },
+    "http_req_duration{esc:api}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 430.13604200000003,
+        "p(95)": 464.43908574999995,
+        "p(99)": 705.2834065,
+        "avg": 348.2296894585938,
+        "min": 32.991292,
+        "med": 330.862688,
+        "max": 2110.230876
+      },
+      "thresholds": {
+        "p(95)<300": {
+          "ok": false
+        }
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 200,
+        "min": 0,
+        "max": 200
+      }
+    },
+    "http_req_failed{esc:web}": {
+      "thresholds": {
+        "rate<0.001": {
+          "ok": true
+        }
+      },
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "fails": 357769,
+        "rate": 0,
+        "passes": 0
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "rate": 602221.8617190978,
+        "count": 37959082
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 375014,
+        "rate": 5949.607244209061
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 31.691806777849404,
+        "min": 0.352625,
+        "med": 13.6187295,
+        "max": 2110.230876,
+        "p(90)": 34.804645900000004,
+        "p(95)": 89.45017729999985,
+        "p(99)": 376.32992766999996
+      }
+    }
+  },
+  "root_group": {
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+      {
+        "name": "GET /pacientes 200",
+        "path": "::GET /pacientes 200",
+        "id": "aeb4817f999da02b300b7a9f0c2a449d",
+        "passes": 17244,
+        "fails": 0
+      },
+      {
+        "passes": 357769,
+        "fails": 0,
+        "name": "frontend 200",
+        "path": "::frontend 200",
+        "id": "e5625951010a2341d5f2ded2029a1f1f"
+      }
+    ],
+    "name": "",
+    "path": ""
+  },
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)",
+      "p(99)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdErrTTY": false,
+    "testRunDurationMs": 63031.72371,
+    "isStdOutTTY": false
+  }
+}

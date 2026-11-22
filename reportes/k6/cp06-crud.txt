@@ -1,0 +1,7 @@
+CP-06 · Tiempo de respuesta CRUD (k6, 10 usuarios virtuales x 30 s por operación)
+  listar_pacientes   prom=16.27ms  p50=14.58ms  p95=25.12ms  máx=548.39ms  ✓ cumple (p95 < 300 ms)
+  crear_examen       prom=11.78ms  p50=10.90ms  p95=17.14ms  máx=111.18ms  ✓ cumple (p95 < 300 ms)
+  leer_examen        prom=9.95ms  p50=9.38ms  p95=14.66ms  máx=99.23ms  ✓ cumple (p95 < 300 ms)
+  actualizar_examen  prom=12.29ms  p50=11.38ms  p95=18.26ms  máx=128.15ms  ✓ cumple (p95 < 300 ms)
+  eliminar_examen    prom=12.75ms  p50=11.63ms  p95=19.10ms  máx=112.71ms  ✓ cumple (p95 < 300 ms)
+  errores HTTP: 0.00 %   solicitudes totales: 120919

@@ -1,0 +1,317 @@
+{
+ "generado": "22-11-2026 02:00",
+ "casos": {
+  "CP-01": {
+   "total": 4,
+   "aprobadas": 4,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-02": {
+   "total": 4,
+   "aprobadas": 3,
+   "no_aprobadas": 1,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-09"
+   ]
+  },
+  "CP-03": {
+   "total": 7,
+   "aprobadas": 1,
+   "no_aprobadas": 6,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-10",
+    "INC-11",
+    "INC-12"
+   ]
+  },
+  "CP-04": {
+   "total": 5,
+   "aprobadas": 3,
+   "no_aprobadas": 2,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-05"
+   ]
+  },
+  "CP-05": {
+   "total": 7,
+   "aprobadas": 3,
+   "no_aprobadas": 4,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-18"
+   ]
+  },
+  "CP-06": {
+   "total": 5,
+   "aprobadas": 5,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-07": {
+   "total": 6,
+   "aprobadas": 3,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-42",
+    "INC-43"
+   ]
+  },
+  "CP-08": {
+   "total": 17,
+   "aprobadas": 12,
+   "no_aprobadas": 5,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-44",
+    "INC-45"
+   ]
+  },
+  "CP-09": {
+   "total": 7,
+   "aprobadas": 3,
+   "no_aprobadas": 4,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-46",
+    "INC-47"
+   ]
+  },
+  "CP-10": {
+   "total": 11,
+   "aprobadas": 6,
+   "no_aprobadas": 5,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-19",
+    "INC-20",
+    "INC-21",
+    "INC-27"
+   ]
+  },
+  "CP-11": {
+   "total": 10,
+   "aprobadas": 6,
+   "no_aprobadas": 4,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-23",
+    "INC-24",
+    "INC-25",
+    "INC-26"
+   ]
+  },
+  "CP-12": {
+   "total": 8,
+   "aprobadas": 0,
+   "no_aprobadas": 8,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-27",
+    "INC-28",
+    "INC-29"
+   ]
+  },
+  "CP-13": {
+   "total": 6,
+   "aprobadas": 0,
+   "no_aprobadas": 6,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-29",
+    "INC-30",
+    "INC-31"
+   ]
+  },
+  "CP-14": {
+   "total": 15,
+   "aprobadas": 12,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-06",
+    "INC-07",
+    "INC-08"
+   ]
+  },
+  "CP-15": {
+   "total": 6,
+   "aprobadas": 2,
+   "no_aprobadas": 4,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-39",
+    "INC-40"
+   ]
+  },
+  "CP-16": {
+   "total": 3,
+   "aprobadas": 3,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-17": {
+   "total": 5,
+   "aprobadas": 5,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-18": {
+   "total": 6,
+   "aprobadas": 3,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-06",
+    "INC-13"
+   ]
+  },
+  "CP-19": {
+   "total": 3,
+   "aprobadas": 3,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-20": {
+   "total": 6,
+   "aprobadas": 3,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-14",
+    "INC-15"
+   ]
+  },
+  "CP-21": {
+   "total": 4,
+   "aprobadas": 3,
+   "no_aprobadas": 1,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-16"
+   ]
+  },
+  "CP-22": {
+   "total": 1,
+   "aprobadas": 1,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-23": {
+   "total": 5,
+   "aprobadas": 2,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-32"
+   ]
+  },
+  "CP-24": {
+   "total": 6,
+   "aprobadas": 4,
+   "no_aprobadas": 2,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-33",
+    "INC-34"
+   ]
+  },
+  "CP-25": {
+   "total": 15,
+   "aprobadas": 6,
+   "no_aprobadas": 9,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-35",
+    "INC-36"
+   ]
+  },
+  "CP-26": {
+   "total": 9,
+   "aprobadas": 9,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-27": {
+   "total": 3,
+   "aprobadas": 0,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-31",
+    "INC-37"
+   ]
+  },
+  "CP-28": {
+   "total": 4,
+   "aprobadas": 3,
+   "no_aprobadas": 1,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-41"
+   ]
+  },
+  "CP-29": {
+   "total": 19,
+   "aprobadas": 17,
+   "no_aprobadas": 2,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-01"
+   ]
+  },
+  "CP-30": {
+   "total": 16,
+   "aprobadas": 6,
+   "no_aprobadas": 10,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-02"
+   ]
+  },
+  "CP-31": {
+   "total": 10,
+   "aprobadas": 7,
+   "no_aprobadas": 3,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-03",
+    "INC-04"
+   ]
+  },
+  "CP-32": {
+   "total": 1,
+   "aprobadas": 1,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  },
+  "CP-33": {
+   "total": 1,
+   "aprobadas": 0,
+   "no_aprobadas": 1,
+   "sin_ejecutar": 0,
+   "incidencias": [
+    "INC-17"
+   ]
+  },
+  "CP-34": {
+   "total": 1,
+   "aprobadas": 1,
+   "no_aprobadas": 0,
+   "sin_ejecutar": 0,
+   "incidencias": []
+  }
+ }
+}
