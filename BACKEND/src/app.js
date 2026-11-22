@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
 const morgan = require("morgan");
 const swaggerUi = require("swagger-ui-express");
 
@@ -18,6 +19,9 @@ const rolesRoutes = require("./routes/roles");
 
 const app = express();
 
+// Encabezados de seguridad recomendados (hallazgos de OWASP ZAP y SonarQube S5689):
+// CSP, anti-clickjacking, nosniff, HSTS, y elimina X-Powered-By.
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
