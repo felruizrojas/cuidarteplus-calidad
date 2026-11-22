@@ -1,0 +1,5 @@
+# Falsos positivos revisados por el equipo (no son secretos reales):
+# contraseñas FICTICIAS usadas como datos de entrada en las pruebas automatizadas.
+eb3b82df6b0e83186fd21044d2bf4849453cd8e4:BACKEND/tests/integration/api.test.js:generic-api-key:90
+eb3b82df6b0e83186fd21044d2bf4849453cd8e4:BACKEND/tests/integration/api.test.js:generic-api-key:102
+eb3b82df6b0e83186fd21044d2bf4849453cd8e4:BACKEND/tests/unit/validaciones.test.js:generic-api-key:27
