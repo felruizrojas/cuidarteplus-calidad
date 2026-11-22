@@ -27,7 +27,7 @@ jobs:
   # -------------------------------------------------------------------
   secretos:
     name: 1a · Secretos (Gitleaks)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # versión fija: Playwright 1.56 aún no soporta Ubuntu 26.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,7 +40,7 @@ jobs:
 
   dockerfiles:
     name: 1b · Dockerfiles (Hadolint)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # versión fija: Playwright 1.56 aún no soporta Ubuntu 26.04
     steps:
       - uses: actions/checkout@v4
       - name: Revisar Dockerfile del backend
@@ -58,7 +58,7 @@ jobs:
   pruebas-codigo:
     name: 2 · Unitarias + Integración (Jest) y SonarQube
     needs: [secretos, dockerfiles]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # versión fija: Playwright 1.56 aún no soporta Ubuntu 26.04
     env:
       # Si el secreto aún no existe, el análisis de SonarQube Cloud se omite
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -115,7 +115,7 @@ jobs:
   pruebas-sistema:
     name: 3 · Sistema, aceptación, rendimiento y seguridad
     needs: [pruebas-codigo]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # versión fija: Playwright 1.56 aún no soporta Ubuntu 26.04
     steps:
       - uses: actions/checkout@v4
 
@@ -207,7 +207,7 @@ jobs:
     name: 4 · Publicar imágenes Docker (GHCR)
     needs: [pruebas-sistema]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # versión fija: Playwright 1.56 aún no soporta Ubuntu 26.04
     permissions:
       contents: read
       packages: write
