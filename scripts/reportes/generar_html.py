@@ -76,6 +76,7 @@ def sev(valor):
 
 def guardar_json(salida_html, nombre, datos):
     ruta = ruta_segura(os.path.join(os.path.dirname(os.path.abspath(salida_html)), os.path.basename(nombre)))
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
     with open(ruta, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
 
