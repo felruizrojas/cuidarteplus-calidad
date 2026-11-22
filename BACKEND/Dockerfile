@@ -5,7 +5,7 @@ WORKDIR /app
 
 # 1) Primero solo los archivos de dependencias (aprovecha la caché de Docker)
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 
 # 2) Luego el código de la aplicación (sin copiar documentos de uploads/)
 COPY src/ ./src/

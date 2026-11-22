@@ -22,7 +22,8 @@ const app = express();
 // Encabezados de seguridad recomendados (hallazgos de OWASP ZAP y SonarQube S5689):
 // CSP, anti-clickjacking, nosniff, HSTS, y elimina X-Powered-By.
 app.use(helmet());
-app.use(cors());
+// CORS restringido al dominio del frontend (hallazgo de OWASP ZAP y SonarQube S5122, INC-21)
+app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:3334" }));
 app.use(express.json());
 app.use(morgan("dev"));
 

@@ -8,17 +8,13 @@ ARG VITE_API_URL=http://localhost:4000
 
 COPY package*.json ./
 
-# Instalación de dependencias (con versiones fijas en los paquetes extra)
-RUN rm -rf node_modules package-lock.json && \
-    npm install && \
-    npm install @rollup/rollup-linux-x64-gnu@4 --save-optional && \
-    npm rebuild esbuild
+# Instalación reproducible: versiones exactas del package-lock.json
+# y sin ejecutar scripts de instalación de terceros
+RUN npm ci --ignore-scripts
 
 COPY . .
 
 ENV VITE_API_URL=${VITE_API_URL}
-
-RUN rm -rf node_modules/.cache && npm rebuild esbuild --force
 
 RUN npm run build
 
