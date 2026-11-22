@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Genera los reportes HTML de las herramientas que no producen HTML por sí mismas.
 
-  gitleaks   <reporte.json> <salida.html>
-  hadolint   <salida.html> <Dockerfile=reporte.json> [...]
-  sonarqube  <salida.html> --url URL --proyecto CLAVE [--usuario U --clave C] [--titulo T]
-  codeql     <salida.html> --repo dueño/repo
-  dependabot <salida.html> --repo dueño/repo
-  indice     <carpeta_reportes>
+  gitleaks             reportes/gitleaks/gitleaks.json   -> reportes/gitleaks/index.html
+  hadolint             reportes/hadolint/*.json          -> reportes/hadolint/index.html
+  sonarqube local|cloud  API de SonarQube                -> reportes/sonarqube/<modo>.html
+  codeql               API de GitHub (Code scanning)     -> reportes/codeql/index.html
+  dependabot           API de GitHub (Dependabot)        -> reportes/dependabot/index.html
+  indice               todos los anteriores              -> reportes/index.html
 
 Las consultas a GitHub usan la CLI `gh` si está disponible o la variable GITHUB_TOKEN.
 """
@@ -36,7 +36,7 @@ a{color:var(--azul)}
 
 
 # ------------------------------------------------------------------ Validación de entradas
-BASE = os.path.realpath(os.environ.get("REPORTES_BASE", os.getcwd()))
+BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 RUTA_API = __import__("re").compile(r"^repos/[\w.-]+/[\w.-]+/[\w/-]+(\?[\w=&.-]+)?$")
 
 
@@ -386,25 +386,39 @@ def indice(carpeta):
     pagina("Cuidarte+ · Reportes de calidad y seguridad", "Índice de reportes HTML", cuerpo, os.path.join(carpeta, "index.html"))
 
 
+# Rutas y datos fijos: los argumentos de línea de comandos solo eligen qué reporte generar,
+# nunca se usan como rutas ni como parte de las consultas (evita path traversal e inyección).
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+R = os.path.join(RAIZ, "reportes")
+REPO = "felruizrojas/cuidarteplus-calidad"
+SONAR = {
+    "local": ("http://localhost:9000", "cuidarteplus-backend", "SonarQube local · Cuidarte+ Backend"),
+    "cloud": ("https://sonarcloud.io", "felruizrojas_cuidarteplus-calidad", "SonarQube Cloud · Cuidarte+ (pipeline)"),
+}
+
+
 def main(a):
-    if not a:
-        print(__doc__); sys.exit(1)
-    cmd, resto = a[0], a[1:]
-    opts = {}
-    pos = []
-    i = 0
-    while i < len(resto):
-        if resto[i].startswith("--"):
-            opts[resto[i][2:]] = resto[i + 1]; i += 2
-        else:
-            pos.append(resto[i]); i += 1
-    if cmd == "gitleaks": gitleaks(pos[0], pos[1])
-    elif cmd == "hadolint": hadolint(pos[0], pos[1:])
-    elif cmd == "sonarqube": sonarqube(pos[0], opts["url"], opts["proyecto"], opts.get("usuario"), opts.get("clave"), opts.get("titulo"))
-    elif cmd == "codeql": codeql(pos[0], opts["repo"])
-    elif cmd == "dependabot": dependabot(pos[0], opts["repo"])
-    elif cmd == "indice": indice(pos[0])
-    else: print(__doc__); sys.exit(1)
+    cmd = a[0] if a else ""
+    if cmd == "gitleaks":
+        gitleaks(os.path.join(R, "gitleaks", "gitleaks.json"), os.path.join(R, "gitleaks", "index.html"))
+    elif cmd == "hadolint":
+        hadolint(os.path.join(R, "hadolint", "index.html"),
+                 [f"{d}/Dockerfile=" + os.path.join(R, "hadolint", f"{d}.json") for d in ("BACKEND", "FRONTEND")])
+    elif cmd == "sonarqube" and len(a) > 1 and a[1] in SONAR:
+        modo = "local" if a[1] == "local" else "cloud"
+        url, proyecto, titulo = SONAR[modo]
+        usuario = "admin" if modo == "local" else None
+        clave = os.environ.get("SONAR_ADMIN_PASSWORD") if modo == "local" else None
+        sonarqube(os.path.join(R, "sonarqube", f"{modo}.html"), url, proyecto, usuario, clave, titulo)
+    elif cmd == "codeql":
+        codeql(os.path.join(R, "codeql", "index.html"), REPO)
+    elif cmd == "dependabot":
+        dependabot(os.path.join(R, "dependabot", "index.html"), REPO)
+    elif cmd == "indice":
+        indice(R)
+    else:
+        print(__doc__)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

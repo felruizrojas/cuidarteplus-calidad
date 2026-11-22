@@ -43,7 +43,7 @@ jobs:
 
       - name: Generar reporte HTML de Gitleaks
         if: always()
-        run: python3 scripts/reportes/generar_html.py gitleaks gitleaks.json reportes/gitleaks/index.html && cp gitleaks.json reportes/gitleaks/
+        run: mkdir -p reportes/gitleaks && cp gitleaks.json reportes/gitleaks/ && python3 scripts/reportes/generar_html.py gitleaks
 
       - name: Guardar reporte de Gitleaks
         if: always()
@@ -68,8 +68,7 @@ jobs:
             docker run --rm -i hadolint/hadolint:v2.12.0 hadolint --format json - < "$d/Dockerfile" > "reportes/hadolint/$d.json" || rc=1
             echo "== $d/Dockerfile" && cat "reportes/hadolint/$d.json" && echo
           done
-          python3 scripts/reportes/generar_html.py hadolint reportes/hadolint/index.html \
-            BACKEND/Dockerfile=reportes/hadolint/BACKEND.json FRONTEND/Dockerfile=reportes/hadolint/FRONTEND.json
+          python3 scripts/reportes/generar_html.py hadolint
           exit $rc
 
       - name: Guardar reporte de Hadolint
@@ -289,10 +288,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           rm -rf reportes && mv reportes-nuevos reportes
-          python3 scripts/reportes/generar_html.py sonarqube reportes/sonarqube/cloud.html --url https://sonarcloud.io \
-            --proyecto felruizrojas_cuidarteplus-calidad --titulo "SonarQube Cloud · Cuidarte+ (pipeline)" || true
-          python3 scripts/reportes/generar_html.py codeql reportes/codeql/index.html --repo "$GITHUB_REPOSITORY" || true
-          python3 scripts/reportes/generar_html.py indice reportes
+          python3 scripts/reportes/generar_html.py sonarqube cloud || true
+          python3 scripts/reportes/generar_html.py codeql || true
+          python3 scripts/reportes/generar_html.py indice
 
       - name: Publicar todos los reportes HTML como un solo artefacto
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

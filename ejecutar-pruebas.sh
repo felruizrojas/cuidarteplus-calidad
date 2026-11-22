@@ -28,7 +28,7 @@ etapa "1/9 Gitleaks: secretos en el historial"
 docker run --rm -v "$RAIZ:/repo" -e GIT_CONFIG_COUNT=1 -e GIT_CONFIG_KEY_0=safe.directory -e GIT_CONFIG_VALUE_0="*" \
   zricethezav/gitleaks:v8.21.2 git /repo --redact -v --report-format json --report-path /repo/reportes/gitleaks/gitleaks.json
 registrar "Gitleaks" "exit $?"
-$G gitleaks "$R/gitleaks/gitleaks.json" "$R/gitleaks/index.html"
+$G gitleaks
 
 etapa "2/9 Hadolint: Dockerfiles"
 rc=0
@@ -36,7 +36,7 @@ for d in BACKEND FRONTEND; do
   docker run --rm -i hadolint/hadolint:v2.12.0 hadolint --format json - < "$d/Dockerfile" > "$R/hadolint/$d.json" || rc=1
 done
 registrar "Hadolint" "exit $rc"
-$G hadolint "$R/hadolint/index.html" BACKEND/Dockerfile="$R/hadolint/BACKEND.json" FRONTEND/Dockerfile="$R/hadolint/FRONTEND.json"
+$G hadolint
 
 etapa "3/9 Cuidarte+ desde cero con Docker Compose"
 docker compose down -v >/dev/null 2>&1
@@ -57,12 +57,12 @@ etapa "5/9 SonarQube (local y Cloud)"
 if curl -s http://localhost:9000/api/system/status | grep -q '"status":"UP"'; then
   ./sonar.sh scan-backend >/dev/null 2>&1; sleep 10
   set -a; . ./.env.sonar; set +a
-  $G sonarqube "$R/sonarqube/local.html" --url http://localhost:9000 --proyecto cuidarteplus-backend --usuario admin --clave "$SONAR_ADMIN_PASSWORD" --titulo "SonarQube local · Cuidarte+ Backend"
+  $G sonarqube local
   registrar "SonarQube local" "generado"
 else
   registrar "SonarQube local" "omitido (encienda con ./sonar.sh up)"
 fi
-$G sonarqube "$R/sonarqube/cloud.html" --url https://sonarcloud.io --proyecto felruizrojas_cuidarteplus-calidad --titulo "SonarQube Cloud · Cuidarte+ (pipeline)" \
+$G sonarqube cloud \
   && registrar "SonarQube Cloud" "generado"
 
 etapa "6/9 OWASP ZAP: seguridad dinámica del sitio y de la API"
@@ -88,9 +88,9 @@ for s in cp06-crud cp15-concurrencia; do
 done
 
 etapa "9/9 CodeQL y Dependabot (GitHub) + índice"
-$G codeql "$R/codeql/index.html" --repo "$REPO" && registrar "CodeQL" "generado"
-$G dependabot "$R/dependabot/index.html" --repo "$REPO" && registrar "Dependabot" "generado"
-$G indice "$R"
+$G codeql && registrar "CodeQL" "generado"
+$G dependabot && registrar "Dependabot" "generado"
+$G indice
 
 etapa "Resumen"
 printf '%s\n' "${RESUMEN[@]}"
