@@ -1,8 +1,9 @@
 // Funciones de apoyo compartidas por las pruebas de integración y seguridad (Jest + Supertest)
+const crypto = require("crypto");
 const request = require("supertest");
 const app = require("../src/app");
 
-const sufijo = () => `${Date.now()}${Math.floor(Math.random() * 1000)}`;
+const sufijo = () => `${Date.now()}${crypto.randomInt(1000)}`;
 
 // Dígito verificador de un RUT chileno (módulo 11)
 function dv(numero) {
@@ -15,7 +16,7 @@ function dv(numero) {
   const r = 11 - (suma % 11);
   return r === 11 ? "0" : r === 10 ? "K" : String(r);
 }
-const numeroAleatorio = () => 10000000 + Math.floor(Math.random() * 8999999);
+const numeroAleatorio = () => crypto.randomInt(10000000, 19000000);
 const rutValido = () => {
   const n = numeroAleatorio();
   return `${n}-${dv(n)}`;
@@ -79,10 +80,13 @@ async function subirDocumento(token, examenId, pacienteId, nombre = "resultado_e
     .attach("documentos", contenido, { filename: nombre, contentType: tipo });
 }
 
+const claveAleatoria = () => `Qa-${crypto.randomBytes(9).toString("base64url")}9a!`;
+
 // Registra un visitante con RUT (queda como paciente con ficha propia)
 async function registrarPacienteConCuenta() {
   const id = sufijo();
-  const datos = { nombre_usuario: `pac_${id}`, password: "Cuidarte2026!#", correo: `pac_${id}@correo.cl`, rut: rutValido() };
+  // Contraseña aleatoria generada en cada ejecución (no hay credenciales fijas en el código)
+  const datos = { nombre_usuario: `pac_${id}`, password: claveAleatoria(), correo: `pac_${id}@correo.cl`, rut: rutValido() };
   await request(app).post("/autenticacion/registro").send(datos);
   const token = await iniciarSesion(datos.nombre_usuario, datos.password);
   return { ...datos, token };

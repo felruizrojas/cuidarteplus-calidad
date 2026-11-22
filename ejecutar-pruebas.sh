@@ -17,7 +17,7 @@ RAPIDO="${1:-}"
 declare -a RESUMEN=()
 
 # En Docker Desktop (Mac/Windows) los contenedores llegan al equipo por host.docker.internal; en Linux, por --network host
-if [ "$(uname)" = "Linux" ]; then RED="--network host"; HOST="localhost"; else RED=""; HOST="host.docker.internal"; fi
+if [[ "$(uname)" == "Linux" ]]; then RED="--network host"; HOST="localhost"; else RED=""; HOST="host.docker.internal"; fi
 
 etapa() { echo; echo "=================== $1 ==================="; }
 registrar() { RESUMEN+=("$(printf '%-34s %s' "$1" "$2")"); }
@@ -75,12 +75,12 @@ docker run --rm $RED -v "$R/zap:/zap/wrk:rw" ghcr.io/zaproxy/zaproxy:stable \
 registrar "OWASP ZAP (API)" "exit $?"
 
 etapa "7/9 Playwright + axe-core: sistema, aceptación, seguridad, usabilidad y resiliencia"
-(cd pruebas-e2e && npm ci --ignore-scripts --silent && npx playwright install chromium firefox webkit >/dev/null && npx playwright test)
+(cd pruebas-e2e && npm ci --ignore-scripts --silent && ./node_modules/.bin/playwright install chromium firefox webkit >/dev/null && ./node_modules/.bin/playwright test)
 registrar "Playwright + axe-core" "exit $?"
 
 etapa "8/9 k6: rendimiento (CP-06 y CP-15)"
 for s in cp06-crud cp15-concurrencia; do
-  [ "$s" = cp15-concurrencia ] && [ "$RAPIDO" = "--rapido" ] && { registrar "k6 $s" "omitido (--rapido)"; continue; }
+  [[ "$s" == cp15-concurrencia && "$RAPIDO" == "--rapido" ]] && { registrar "k6 $s" "omitido (--rapido)"; continue; }
   docker run --rm -i $RED -u "$(id -u):$(id -g)" -e BASE_URL="http://$HOST:4445" -e WEB_URL="http://$HOST:3334" \
     -e K6_WEB_DASHBOARD=true -e K6_WEB_DASHBOARD_EXPORT="/resultados/$s.html" -e RESUMEN="/resultados/$s-resumen.json" \
     -v "$RAIZ/pruebas-rendimiento:/scripts" -v "$R/k6:/resultados" grafana/k6:1.3.0 run --quiet "/scripts/$s.js" | tee "$R/k6/$s.txt"

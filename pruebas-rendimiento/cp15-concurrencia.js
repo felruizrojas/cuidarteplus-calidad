@@ -8,7 +8,7 @@ const API = __ENV.BASE_URL || "http://localhost:4445";
 const WEB = __ENV.WEB_URL || "http://localhost:3334";
 const DURACION = __ENV.DURACION || "30s";
 const VUS = Number(__ENV.VUS || 200);
-const s = parseInt(DURACION, 10);
+const s = Number.parseInt(DURACION, 10);
 
 export const options = {
   summaryTrendStats: ["avg", "min", "med", "max", "p(90)", "p(95)", "p(99)"],

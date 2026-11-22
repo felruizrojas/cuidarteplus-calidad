@@ -8,7 +8,7 @@ import { check } from "k6";
 const BASE_URL = __ENV.BASE_URL || "http://localhost:4445";
 const DURACION = __ENV.DURACION || "30s";
 const VUS = Number(__ENV.VUS || 10);
-const segundos = parseInt(DURACION, 10);
+const segundos = Number.parseInt(DURACION, 10);
 
 const OPERACIONES = ["listar_pacientes", "crear_examen", "leer_examen", "actualizar_examen", "eliminar_examen"];
 

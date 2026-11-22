@@ -35,7 +35,21 @@ a{color:var(--azul)}
 """
 
 
+# ------------------------------------------------------------------ Validación de entradas
+BASE = os.path.realpath(os.environ.get("REPORTES_BASE", os.getcwd()))
+RUTA_API = __import__("re").compile(r"^repos/[\w.-]+/[\w.-]+/[\w/-]+(\?[\w=&.-]+)?$")
+
+
+def ruta_segura(ruta):
+    """Normaliza una ruta recibida por línea de comandos y verifica que quede dentro del proyecto."""
+    real = os.path.realpath(ruta)
+    if os.path.commonpath([real, BASE]) != BASE:
+        raise ValueError(f"Ruta fuera del proyecto: {ruta}")
+    return real
+
+
 def pagina(titulo, subtitulo, cuerpo, archivo):
+    archivo = ruta_segura(archivo)
     os.makedirs(os.path.dirname(os.path.abspath(archivo)), exist_ok=True)
     with open(archivo, "w", encoding="utf-8") as f:
         f.write(f"""<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -61,13 +75,15 @@ def sev(valor):
 
 
 def guardar_json(salida_html, nombre, datos):
-    ruta = os.path.join(os.path.dirname(os.path.abspath(salida_html)), nombre)
+    ruta = ruta_segura(os.path.join(os.path.dirname(os.path.abspath(salida_html)), os.path.basename(nombre)))
     with open(ruta, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
 
 
 # ------------------------------------------------------------------ GitHub API
 def gh_api(ruta):
+    if not RUTA_API.match(ruta):
+        raise ValueError(f"Consulta no permitida a la API de GitHub: {ruta}")
     if shutil.which("gh") and not os.environ.get("GITHUB_ACTIONS"):
         salida = subprocess.run(["gh", "api", "--paginate", ruta], capture_output=True, text=True)
         if salida.returncode != 0:
@@ -84,6 +100,7 @@ def gh_api(ruta):
 
 # ------------------------------------------------------------------ Gitleaks
 def gitleaks(entrada, salida):
+    entrada = ruta_segura(entrada)
     datos = json.load(open(entrada, encoding="utf-8")) if os.path.getsize(entrada) else []
     filas = [[html.escape(h.get("RuleID", "")), f"<code>{html.escape(h.get('File', ''))}:{h.get('StartLine', '')}</code>",
               html.escape(h.get("Commit", "")[:7] or "-"), html.escape(h.get("Author", "") or "-"), html.escape(h.get("Match", "")[:90])] for h in datos]
@@ -102,6 +119,7 @@ def hadolint(salida, pares):
     resumen = []
     for par in pares:
         nombre, archivo = par.split("=", 1)
+        archivo = ruta_segura(archivo)
         datos = json.load(open(archivo, encoding="utf-8")) if os.path.exists(archivo) and os.path.getsize(archivo) else []
         resumen.append((nombre, len(datos)))
         for h in datos:
@@ -233,6 +251,7 @@ CASOS = [
 
 def _leer(ruta):
     try:
+        ruta = ruta_segura(ruta)
         with open(ruta, encoding="utf-8") as f:
             return json.load(f)
     except (OSError, ValueError):
@@ -311,7 +330,7 @@ def resumen_casos(carpeta):
 
 def tabla_casos(carpeta):
     r = resumen_casos(carpeta)
-    with open(os.path.join(carpeta, "resumen-casos.json"), "w", encoding="utf-8") as f:
+    with open(ruta_segura(os.path.join(carpeta, "resumen-casos.json")), "w", encoding="utf-8") as f:
         json.dump({"generado": AHORA, "casos": r}, f, ensure_ascii=False, indent=1)
     filas, tot = [], Counter()
     for cp, nombre, tipo, herr in CASOS:

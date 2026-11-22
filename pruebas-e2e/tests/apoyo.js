@@ -24,7 +24,7 @@ const PDF = Buffer.from(
     "3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 200 200]>>endobj\ntrailer<</Root 1 0 R>>\n%%EOF\n"
 );
 const sha256 = (b) => crypto.createHash("sha256").update(b).digest("hex");
-const sufijo = () => `${Date.now()}${Math.floor(Math.random() * 1000)}`;
+const sufijo = () => `${Date.now()}${crypto.randomInt(1000)}`;
 
 function dv(numero) {
   let suma = 0;
@@ -36,7 +36,7 @@ function dv(numero) {
   const r = 11 - (suma % 11);
   return r === 11 ? "0" : r === 10 ? "K" : String(r);
 }
-const numeroAleatorio = () => 10000000 + Math.floor(Math.random() * 8999999);
+const numeroAleatorio = () => crypto.randomInt(10000000, 19000000);
 const rutValido = () => { const n = numeroAleatorio(); return `${n}-${dv(n)}`; };
 const rutConDvIncorrecto = () => { const n = numeroAleatorio(); return `${n}-${dv(n) === "0" ? "1" : "0"}`; };
 
@@ -82,10 +82,13 @@ async function iniciarSesionComo(page, rol) {
 }
 
 // ---------- Base de datos y Docker (solo lectura salvo indicación) ----------
+// Ruta absoluta del ejecutable de Docker (no se depende de la variable PATH)
+const fs = require("fs");
+const DOCKER = process.env.DOCKER_BIN || ["/usr/bin/docker", "/usr/local/bin/docker", "/opt/homebrew/bin/docker"].find((r) => fs.existsSync(r));
 // Se usa execFileSync con argumentos separados: no pasa por la shell, así que no hay que escapar nada
 const psql = (sql, db = "cuidarteplus") =>
-  execFileSync("docker", ["exec", PG, "psql", "-U", "postgres", "-d", db, "-tAc", sql], { encoding: "utf8" }).trim();
-const docker = (cmd) => execFileSync("docker", cmd.match(/(?:[^\s"]+|"[^"]*")+/g).map((a) => a.replace(/^"|"$/g, "")), { encoding: "utf8" }).trim();
+  execFileSync(DOCKER, ["exec", PG, "psql", "-U", "postgres", "-d", db, "-tAc", sql], { encoding: "utf8" }).trim();
+const docker = (cmd) => execFileSync(DOCKER, cmd.match(/(?:[^\s"]+|"[^"]*")+/g).map((a) => a.replace(/^"|"$/g, "")), { encoding: "utf8" }).trim();
 
 module.exports = {
   API, USUARIOS, TIPO, CLAVE_QA, PDF, sha256, sufijo, dv, rutValido, rutConDvIncorrecto,
