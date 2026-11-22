@@ -1,5 +1,5 @@
 # Imagen base con soporte vigente (Node 18 ya no recibe actualizaciones de seguridad)
-FROM node:20-alpine
+FROM node:latest
 
 WORKDIR /app
 
