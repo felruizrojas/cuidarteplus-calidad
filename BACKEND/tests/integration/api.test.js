@@ -245,6 +245,12 @@ describe("Defectos conocidos (pendientes de corrección)", () => {
     expect(res.status).toBe(400);
   });
 
+  test.failing("INC-13 / RF-2.7: el administrador elimina un usuario -> 200 (hoy responde 500 y no queda auditado)", async () => {
+    const victima = await crearUsuarioDePrueba(tokenAdmin);
+    const res = await request(app).delete(`/usuarios/${victima.id}`).set("Authorization", `Bearer ${tokenAdmin}`);
+    expect(res.status).toBe(200);
+  });
+
   test.failing("INC-08 / RF-5.1: un paciente NO debe poder insertar registros de auditoría", async () => {
     const res = await request(app)
       .post("/auditoria")

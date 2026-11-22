@@ -7,6 +7,18 @@ const { createUserSchema, updateUserSchema } = require("../validations/users");
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET || "inseguro";
 
+// DEF-01 / DEF-02 (NFR-SEG-4, RB-2): verifica en el backend que el usuario
+// autenticado tenga el rol administrador antes de gestionar usuarios.
+async function esAdministrador(authUser) {
+  const result = await pool.query(
+    `SELECT r.nombre FROM usuario_roles ur
+     JOIN roles r ON r.id = ur.rol_id
+     WHERE ur.usuario_id = $1`,
+    [authUser.usuarioId]
+  );
+  return result.rows.some((r) => r.nombre === "admin" || r.nombre === "administrador");
+}
+
 function getUserFromAuthHeader(req) {
   const auth = req.headers.authorization || "";
   if (!auth.startsWith("Bearer ")) return null;
@@ -28,6 +40,14 @@ router.post("/", validate(createUserSchema), async (req, res) => {
       return res.status(401).json({
         error: "No autorizado",
         glosa: "Token inválido",
+      });
+    }
+
+    // DEF-02: solo un administrador puede crear usuarios y asignar roles
+    if (!(await esAdministrador(authUser))) {
+      return res.status(403).json({
+        error: "Acción no permitida",
+        glosa: "Solo un administrador puede crear usuarios",
       });
     }
 
@@ -600,6 +620,18 @@ async function updateUsuarioSistemaMedico(
 
 router.delete("/:id", async (req, res) => {
   try {
+    // DEF-01: exigir sesión válida y rol administrador ANTES de eliminar
+    const authUserCheck = getUserFromAuthHeader(req);
+    if (!authUserCheck) {
+      return res.status(401).json({ error: "No autorizado", glosa: "Token inválido" });
+    }
+    if (!(await esAdministrador(authUserCheck))) {
+      return res.status(403).json({
+        error: "Acción no permitida",
+        glosa: "Solo un administrador puede eliminar usuarios",
+      });
+    }
+
     const result = await pool.query(
       "DELETE FROM usuarios WHERE id=$1 RETURNING *",
       [req.params.id]
